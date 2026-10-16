@@ -1,28 +1,28 @@
 class Bili < Formula
-  desc "Resumable Bilibili CLI downloader with UID browsing and JSON output"
+  desc "Resumable Bilibili CLI downloader with keyword search and JSON output"
   homepage "https://github.com/chick26/bilibili-downloader-cli"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/chick26/bilibili-downloader-cli/releases/download/v0.1.0/bili-v0.1.0-macos-arm64.tar.gz"
-      sha256 "c4ad250dfccb20da948a7bbdd105afb6c7f43af74748a1defa4ac515c55bc7b8"
+      url "https://github.com/chick26/bilibili-downloader-cli/releases/download/v0.2.0/bili-v0.2.0-macos-arm64.tar.gz"
+      sha256 "fc2b27f97c247a136d0c62258cefd31543c7c30e974c5b83b60eec1bbdda5d2b"
     end
     on_intel do
-      url "https://github.com/chick26/bilibili-downloader-cli/releases/download/v0.1.0/bili-v0.1.0-macos-x86_64.tar.gz"
-      sha256 "84bf652cc379dfd26e64ccf66f5075d355740601a8c7d15228e731d17394c8a3"
+      url "https://github.com/chick26/bilibili-downloader-cli/releases/download/v0.2.0/bili-v0.2.0-macos-x86_64.tar.gz"
+      sha256 "c0034f5ae40e28538a7e60afdb835a06232d9e1f9fd7e4983b26b80857589523"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/chick26/bilibili-downloader-cli/releases/download/v0.1.0/bili-v0.1.0-linux-arm64.tar.gz"
-      sha256 "82d9de01a4e4a9913242d8e2b2b647cf38940242d7db44780b173b37e922a22b"
+      url "https://github.com/chick26/bilibili-downloader-cli/releases/download/v0.2.0/bili-v0.2.0-linux-arm64.tar.gz"
+      sha256 "8077361dc424c0d9894a4baca13a6c1bd3c7f195d85422cae5b36400324a16a3"
     end
     on_intel do
-      url "https://github.com/chick26/bilibili-downloader-cli/releases/download/v0.1.0/bili-v0.1.0-linux-x86_64.tar.gz"
-      sha256 "1c111c7b0a44f9598e04b42d7a6c7abc4aff991f7b7f9bfd3c18bc0e36d3ea74"
+      url "https://github.com/chick26/bilibili-downloader-cli/releases/download/v0.2.0/bili-v0.2.0-linux-x86_64.tar.gz"
+      sha256 "a1598c8ffe292b3bde8fbe4c1d17f1d1ce35cc490a2d38134bae040aec5292f4"
     end
   end
 
@@ -36,6 +36,7 @@ class Bili < Formula
 
   test do
     assert_match version.to_s, shell_output("#{bin}/bili --version")
+    assert_match "--type", shell_output("#{bin}/bili search --help")
     response = JSON.parse(shell_output("#{bin}/bili --data-dir #{testpath}/state auth status --json"))
     assert_equal true, response.fetch("ok")
   end
