@@ -1,28 +1,28 @@
 class Bili < Formula
   desc "Resumable Bilibili CLI downloader with keyword search and JSON output"
   homepage "https://github.com/chick26/bilibili-downloader-cli"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/chick26/bilibili-downloader-cli/releases/download/v0.2.0/bili-v0.2.0-macos-arm64.tar.gz"
-      sha256 "fc2b27f97c247a136d0c62258cefd31543c7c30e974c5b83b60eec1bbdda5d2b"
+      url "https://github.com/chick26/bilibili-downloader-cli/releases/download/v0.2.1/bili-v0.2.1-macos-arm64.tar.gz"
+      sha256 "77fdd9ef06e61131534b8f6550629aae7a0d6bd7184819c711251c605c460112"
     end
     on_intel do
-      url "https://github.com/chick26/bilibili-downloader-cli/releases/download/v0.2.0/bili-v0.2.0-macos-x86_64.tar.gz"
-      sha256 "c0034f5ae40e28538a7e60afdb835a06232d9e1f9fd7e4983b26b80857589523"
+      url "https://github.com/chick26/bilibili-downloader-cli/releases/download/v0.2.1/bili-v0.2.1-macos-x86_64.tar.gz"
+      sha256 "dfc46d3e201a197db2146da3a7906e605324a44bece0bc25d3660a33f2175ea2"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/chick26/bilibili-downloader-cli/releases/download/v0.2.0/bili-v0.2.0-linux-arm64.tar.gz"
-      sha256 "8077361dc424c0d9894a4baca13a6c1bd3c7f195d85422cae5b36400324a16a3"
+      url "https://github.com/chick26/bilibili-downloader-cli/releases/download/v0.2.1/bili-v0.2.1-linux-arm64.tar.gz"
+      sha256 "a361954e61bf2675e6c52004c899a3ab6513d1c66c4dcaa8692e6bd9dd56cb6e"
     end
     on_intel do
-      url "https://github.com/chick26/bilibili-downloader-cli/releases/download/v0.2.0/bili-v0.2.0-linux-x86_64.tar.gz"
-      sha256 "a1598c8ffe292b3bde8fbe4c1d17f1d1ce35cc490a2d38134bae040aec5292f4"
+      url "https://github.com/chick26/bilibili-downloader-cli/releases/download/v0.2.1/bili-v0.2.1-linux-x86_64.tar.gz"
+      sha256 "427b6276512478249e582b7a326b42b0ebb56e558f9c2b321004e6c07bac1447"
     end
   end
 
